@@ -1,0 +1,59 @@
+name: Deploy to production
+on:
+  push:
+    branches:
+    - [Your branch here]
+    
+jobs:
+  backend:
+    name: Upload backend to Amazon ElasticBeanStack (EBS)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:  
+    - name: Checkout source code
+      uses: actions/checkout@v2
+    - name: Dependencies installation
+      run: npm install
+    - name: Generate build
+      run: npm run build
+    - name: Generate deployment package
+      run: zip -r ../deploy.zip . -x '*.git*'  
+    - name: Deploy to ElasticBeanStack
+      uses: einaregilsson/beanstalk-deploy@v13  
+      env:
+        VERSION_LABEL: yourEbsName-source-${{ github.run_id }}
+        ENV: PROD
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: yourEbsName
+        environment_name: yourEbsName-env
+        version_label: ${{ env.VERSION_LABEL }}
+        region: us-east-2
+        deployment_package: deploy.zip
+
+  frontend:
+    name: Upload frontend to Amazon S3 Bucket
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-2
+    - name: Dependencies installation
+      run: npm install
+    - name: Build static files
+      run: npm run build
+    - name: Clean S3 bucket from previous files with the AWS CLI
+      run: aws s3 rm s3://yourBucketName --recursive
+    - name: Copy files to the bucket with the AWS CLI
+      run: aws s3 sync build/ s3://yourBucketName
