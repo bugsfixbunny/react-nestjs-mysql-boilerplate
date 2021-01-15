@@ -12,7 +12,7 @@ Modules are reusable functionnalities between projects that are fully compatible
 
 Some modules are already created like Sockets, IP location, Emailing, upload file on s3 etc.
 
-If you want to be part of the community, join our **[Slack](https://join.slack.com/t/fast-modular-project/shared_invite/zt-kmlmemhz-6bcD0lxh4Wo~6tjQc9gXTQ)** (FR/EN) and we will share with you everything.
+If you want to be part of the community, join our **[Slack](https://join.slack.com/t/fast-modular-project/shared_invite/zt-kxajf3gi-CIvFSB4fx7TktmWwmwP7Ig)** (FR/EN) and we will share with you everything.
 
 ## Description
 
@@ -319,7 +319,7 @@ Recommended folder and file structure :
 </pre>
 
 <p align="center">
-<b>Join our <a href="https://join.slack.com/t/fast-modular-project/shared_invite/zt-kmlmemhz-6bcD0lxh4Wo~6tjQc9gXTQ">Slack</a> if you want more.</>
+<b>Join our <a href="https://join.slack.com/t/fast-modular-project/shared_invite/zt-kxajf3gi-CIvFSB4fx7TktmWwmwP7Ig">Slack</a> if you want more.</>
 </p>
 <p align="center">
   <img src="https://media.giphy.com/media/oVW4ztszdtmM0/giphy.gif" alt="animated"/>
