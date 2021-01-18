@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://fast-modular-project.com/" target="blank"><img src="./fmp.png" height="130px" alt="FMP Logo"/></a>
+  <a href="https://fast-modular-project.com/" target="_blank"><img src="./fmp.png" height="130px" alt="FMP Logo"/></a>
 </p>
 
 ### Modular code to help you start and deploy your project faster.
