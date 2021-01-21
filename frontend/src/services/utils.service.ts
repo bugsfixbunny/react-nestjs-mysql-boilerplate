@@ -10,7 +10,6 @@ export const queryBuilder = query => {
 };
 
 export const put = async (route, object) => {
-    console.log("ICIPut " + environment.apiUrl + route);
     let headers = {
         Accept: "application/json",
         "Content-Type": "application/json"
@@ -26,7 +25,6 @@ export const put = async (route, object) => {
 };
 
 export const get = async route => {
-    console.log("ICIGet " + environment.apiUrl + route);
     const headers = {
         Accept: "application/json",
         "Content-Type": "application/json"
@@ -55,7 +53,6 @@ export const del = async route => {
 };
 
 export const post = async (route, object) => {
-    console.log("ICIPost " + environment.apiUrl + route);
     let headers = {
         Accept: "application/json",
         "Content-Type": "application/json"
