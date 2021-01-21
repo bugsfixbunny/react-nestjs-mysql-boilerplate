@@ -13,7 +13,7 @@ export class UsersController {
     @Roles('user', 'premium', 'admin')
     async getMe(@AuthUser() user) {
         return await this.usersService.findOne({
-            userId: user.userId
+            id: user.id
         });
     }
 }

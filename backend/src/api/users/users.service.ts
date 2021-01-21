@@ -28,7 +28,7 @@ export class UsersService {
             .createQueryBuilder("user")
             .select("user.password")
             .addSelect("user.email")
-            .addSelect("user.userId")
+            .addSelect("user.id")
             .addSelect("user.role")
             .where("user.email = :email", { email: email })
             .getOne();

@@ -31,7 +31,7 @@ export class AuthService {
     }
 
     async createToken(user: User) {
-        const jwtPayload: JwtPayload = { userId: user.userId, email: user.email, role: user.role };
+        const jwtPayload: JwtPayload = { id: user.id, email: user.email, role: user.role };
         return await jwt.sign(jwtPayload, this.config.environment.secretKey, { expiresIn: "365d" });
     }
 }
