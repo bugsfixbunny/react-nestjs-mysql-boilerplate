@@ -3,7 +3,7 @@ This is not adapted for web sites where SEO is important like a marketplace for 
 
 If you don't know the stack, here is some very usefull links :
 
-- **React.js**: [React.js in 10 minutes](https://blog.fast-modular-project.com)(coming soon) / [Official documentation.](https://fr.reactjs.org/) 
+- **React.js**: [React.js in 10 minutes](https://blog.fast-modular-project.com) (coming soon) / [Official documentation.](https://fr.reactjs.org/) 
 
 - **Nest (NestJS)**: [NestJS in 10 minutes](https://blog.fast-modular-project.com/nestjs-in-10-minutes) / [Official documentation.](https://nestjs.com/) 
 
