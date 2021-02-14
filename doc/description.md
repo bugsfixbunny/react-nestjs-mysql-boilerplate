@@ -1,4 +1,4 @@
-This starter allows you to develop a web application like Facebook, Twitter, Reddit etc… <br/>
+This starter allows you to develop a web application like Facebook, Twitter, Reddit etc… 
 This is not adapted for web sites where SEO is important like a marketplace for example. 
 
 If you don't know the stack, here is some very usefull links :
