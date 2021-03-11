@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, useHistory } from 'react-router';
+
 import Container from '../../components/style/container.component';
 import Content from '../../components/style/content.component';
 import Button from '../../components/forms/button.component';

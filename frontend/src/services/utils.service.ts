@@ -6,63 +6,46 @@ export const queryBuilder = query => {
     Object.keys(query).forEach(key => {
         queryBuilder += `${key}=${JSON.stringify(query[key])}&`;
     });
+
     return queryBuilder;
 };
 
-export const put = async (route, object) => {
+const headers = (): any => {
     let headers = {
-        Accept: "application/json",
+        "Accept": "application/json",
         "Content-Type": "application/json"
     };
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('token'))
         headers["Authorization"] = localStorage.getItem('token');
-    }
+    return headers;
+}
+
+export const put = async (route: string, object: any) => {
     return await fetch(environment.apiUrl + route, {
         method: "put",
-        headers,
+        headers: headers(),
         body: JSON.stringify(object)
     });
 };
 
-export const get = async route => {
-    const headers = {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-    };
-    if (localStorage.getItem('token')) {
-        headers["Authorization"] = localStorage.getItem('token');
-    }
+export const get = async (route: string) => {
     return await fetch(environment.apiUrl + route, {
         method: "get",
-        headers
+        headers: headers(),
     });
 };
 
-export const del = async route => {
-    let headers = {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-    };
-    if (localStorage.getItem('token')) {
-        headers["Authorization"] = localStorage.getItem('token');
-    }
+export const del = async (route: string) => {
     return await fetch(environment.apiUrl + route, {
         method: "delete",
-        headers
+        headers: headers()
     });
 };
 
-export const post = async (route, object) => {
-    let headers = {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-    };
-    if (localStorage.getItem('token')) {
-        headers["Authorization"] = localStorage.getItem('token');
-    }
+export const post = async (route: string, object: any) => {
     return await fetch(environment.apiUrl + route, {
         method: "post",
-        headers,
+        headers: headers(),
         body: JSON.stringify(object)
     });
 };

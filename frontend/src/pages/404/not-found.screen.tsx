@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from '../../components/forms/button.component';
-import Text from '../../components/style/text.component';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import Button from '../../components/forms/button.component';
+import Text from '../../components/style/text.component';
 import colors from '../../themes/colors.theme';
 
 const Container = styled.div`

@@ -15,7 +15,6 @@ export class AuthService {
         private config: ConfigService) { }
 
     async signUp(user: User): Promise<User> {
-        console.log(user);
         user.password = await bcrypt.hash(user.password, this.saltRounds);
         return await this.userService.create(user);
     }
@@ -30,7 +29,7 @@ export class AuthService {
         return user;
     }
 
-    async createToken(user: User) {
+    async createToken(user: User): Promise<string> {
         const jwtPayload: JwtPayload = { id: user.id, email: user.email, role: user.role };
         return await jwt.sign(jwtPayload, this.config.environment.secretKey, { expiresIn: "365d" });
     }

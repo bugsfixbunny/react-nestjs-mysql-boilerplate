@@ -26,15 +26,30 @@ export class UsersService {
     async findForAuth(email: string): Promise<User> {
         return await this.userRepository
             .createQueryBuilder("user")
-            .select("user.password")
-            .addSelect("user.email")
-            .addSelect("user.id")
-            .addSelect("user.role")
+            .select([
+                "user.password",
+                "user.email",
+                "user.id",
+                "user.role"
+            ])
             .where("user.email = :email", { email: email })
             .getOne();
     }
 
     async findOne(user: User): Promise<User> {
         return await this.userRepository.findOne(user);
+    }
+
+    async findMe(userId): Promise<User> {
+        return await this.userRepository
+            .createQueryBuilder("user")
+            .select([
+                "user.id",
+                "user.email",
+                "user.role",
+                "user.pseudo"
+            ])
+            .where("user.id = :userId", { userId })
+            .getOne();
     }
 }

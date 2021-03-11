@@ -1,5 +1,7 @@
 import React from 'react';
 import { Redirect, useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
+
 import Container from '../../components/style/container.component';
 import Content from '../../components/style/content.component';
 import Button from '../../components/forms/button.component';
@@ -8,7 +10,6 @@ import TextInput from '../../components/forms/text.input';
 import { validateEmail } from '../../utils/regex.util';
 import { signin, signup } from '../../services/auth.service';
 import { login } from '../../utils/auth.utils';
-import { Link } from 'react-router-dom';
 
 
 const SignupScreen = () => {
@@ -41,14 +42,16 @@ const SignupScreen = () => {
             password,
             pseudo
         });
-        if (!res.error) {
-            const res = await signin(email, password);
-            if (res.jwt) {
-                login(res.jwt);
-                history.push("/connected");
+        if (res.statusCode === 200) {
+            if (res.data.success) {
+                const res = await signin(email, password);
+                if (res.data.token) {
+                    login(res.data.token);
+                    history.push("/connected");
+                }
+            } else {
+                setErrorMsg("Email already use");
             }
-        } else {
-            setErrorMsg("Email already use");
         }
         setLoading(false);
     }
