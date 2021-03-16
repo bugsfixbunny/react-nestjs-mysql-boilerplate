@@ -119,10 +119,3 @@ Recommended folder and file structure :
         ├── footer
         └── guards
 </pre>
-
-<p align="center">
-<b>Join our <a href="https://join.slack.com/t/fast-modular-project/shared_invite/zt-kxajf3gi-CIvFSB4fx7TktmWwmwP7Ig">Slack</a> if you want more.</>
-</p>
-<p align="center">
-  <img src="https://media.giphy.com/media/oVW4ztszdtmM0/giphy.gif" alt="animated"/>
-</p>
