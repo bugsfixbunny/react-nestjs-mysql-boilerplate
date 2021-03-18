@@ -9,7 +9,7 @@ If you don't know the stack, here is some very usefull links :
 
 ## Features included in the starter
 
-- User authentification
+- User authentication
 - Rest API integration
 - Backend logging
 - Continuous integration
@@ -18,4 +18,4 @@ If you don't know the stack, here is some very usefull links :
 
 Many other features are available thanks to modules developped by the community.
 
-This starter is used by Galadrim, a french web agency base in Paris with 30 developpers.
+This starter is currently used by Galadrim, a french web agency base in Paris made of 30 developpers.
