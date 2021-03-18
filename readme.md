@@ -24,6 +24,6 @@ If you don't know the stack, here is some very usefull links :
 
 Many other features are available thanks to modules developped by the community. see more [HERE](https://fast-modular-project.com/modules?starter=starter-reacjs-nestjs-mysql)
 
-This starter is used by Galadrim, a french web agency base in Paris with 30 developpers.
+This starter is currently used by Galadrim, a french web agency base in Paris made of 30 developpers.
 
-[full documentation](https://fast-modular-project.com/starters/starter-reacjs-nestjs-mysql)
+** See full documentation [here](https://fast-modular-project.com/starters/starter-reacjs-nestjs-mysql) **
