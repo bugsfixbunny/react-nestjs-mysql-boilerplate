@@ -15,7 +15,7 @@ If you don't know the stack, here is some very usefull links :
 
 ## Features included in the starter
 
-- User authentification
+- User authentication
 - Rest API integration
 - Backend logging
 - Continuous integration
@@ -26,4 +26,4 @@ Many other features are available thanks to modules developped by the community.
 
 This starter is currently used by Galadrim, a french web agency base in Paris made of 30 developpers.
 
-** See full documentation [here](https://fast-modular-project.com/starters/starter-reacjs-nestjs-mysql) **
+See full documentation [here](https://fast-modular-project.com/starters/starter-reacjs-nestjs-mysql)
