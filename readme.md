@@ -25,17 +25,17 @@
 <div align="center">
   <!-- Node version -->
   <a href="https://github.com/Fast-Modular-Project/starter-reactjs-nestjs-mysql/blob/master/frontend/Dockerfile#L1">
-    <img src="https://img.shields.io/badge/node%20version-13.7.0-brightgreen" alt="Node version" />
+    <img src="https://img.shields.io/badge/node%20version-13.7.0-brightgreen?logo=node.js" alt="Node version" />
   </a>
   
   <!-- Docker compose -->
   <a href="https://github.com/Fast-Modular-Project/starter-reactjs-nestjs-mysql/blob/master/docker-compose.yml#L1">
-    <img src="https://img.shields.io/badge/docker%20compose-3.7-ff69b4" alt="Docker compose veersion" />
+    <img src="https://img.shields.io/badge/docker%20compose-3.7-ff69b4?logo=docker" alt="Docker compose version" />
   </a>
   
   <a href="https://join.slack.com/t/fast-modular-project/shared_invite/zt-o4xbnp6b-QWVWS8VUBTaurVU1g~9rIw">
     <img 
-    alt="Chat with us on Slack" src="https://img.shields.io/badge/join%20the%20community-on%20slack-blue"/>
+    alt="Chat with us on Slack" src="https://img.shields.io/badge/join%20the%20community-on%20slack-blue?logo=slack"/>
   </a>
   <a href="https://fast-modular-project.com">
     <img alt="Supported by Fast Modular Project" src="https://img.shields.io/badge/supported%20by-Fast%20Modular%20Project-ed422e" />
