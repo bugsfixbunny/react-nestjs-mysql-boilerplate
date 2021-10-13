@@ -51,9 +51,6 @@
 
 <br />
 
-<div align="center">
-  <sub>Created by <strong><a href="https://galadrim.fr">Galadrim</a></strong></sub>
-</div>
 
 ## Features included in the starter
 
